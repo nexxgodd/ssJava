@@ -1,0 +1,43 @@
+package com.skillstorm.data;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
+import com.skillstorm.bean.Car;
+
+public class CarrrDAO {
+	private final static String URL = "jdbc:mysql://localhost:3306/july_java";
+	private final static String USERNAME = "root";
+	private final static String PASSWORD = "root";
+	
+	static {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			System.out.println("driver broke");
+			e.printStackTrace();
+		}
+	}
+	
+	public List<Car> selectAll(){
+		List<Car> cars = new LinkedList<>();
+		
+		try(Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD)){
+			ResultSet rs=conn.prepareStatement("select vin, year, make, model, body_style, price, color, url from cars;").executeQuery();
+			while(rs.next()) {			//vin, 		year, 			make, 			model, 		body_style, 		price, 			color, 			url
+				cars.add(new Car(rs.getString(1),rs.getInt(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getFloat(6),rs.getString(7), rs.getString(8)));
+			}
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}		
+		return cars;
+	}
+}
+
+
+
+

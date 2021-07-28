@@ -1,0 +1,12 @@
+package com.skillstorm.beans;
+
+public class Flight {
+	
+//	id
+//	to
+//	from
+//	departure
+//	arival
+//	flight#
+
+}

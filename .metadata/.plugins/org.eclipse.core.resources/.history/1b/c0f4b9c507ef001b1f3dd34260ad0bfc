@@ -1,0 +1,5 @@
+package com.skillstorm.bean;
+
+public class Car {
+
+}

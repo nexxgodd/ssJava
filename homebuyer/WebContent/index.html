@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+
+		<!-- Bootstrap CSS -->
+		<link href="/styles.css" rel="stylesheet">
+
+		<title>home | home</title>
+		<script>
+			var house ={};
+			document.addEventListener("DOMContentLoaded",function(){
+
+
+				var home = [];
+				var xhr = new XMLHttpRequest();
+				xhr.open("GET","http://localhost:8080/homebuyer/Home");
+				xhrPost.onreadystatechange = function(){
+					if(xhrPost.readyState ===4){
+						JSON.parse(xhr.responseText).forEach(element => {
+							homes.push(element);
+							updateTable(element);							
+						});
+					}
+				}
+				xhr.send();
+
+				document.getElementById("new-home").addEventListener("submit", function(e){
+					alert("jos")
+					e.preventDefault();
+					var add= document.getElementById("address").value;
+					var pri= document.getElementById("price").value;
+					house = {address: add, price: pri};
+
+					var xhrPost = newXMLHttpRequest();
+					xhrPost.open("POST","http://localhost:8080/homebuyer/Home");
+					xhrPost.onreadystatechange = function(){
+						if(xhrPost.readyState ===4){
+							updateTable(house);
+							document.getElementById("address").value=null;
+							document.getElementById("price").value=null;
+						}
+					}
+					xhrPost.send(JSON.stringify(house));
+
+
+				});
+			});
+
+
+			var updateTable = function(home){
+
+				var row = document.createElement("TR");
+				row.innerHTML=`<tr><td>${home.address}</td><td>${home.price}</td></tr>`;
+				document.getElementById("home-table").appendChild(row);
+			}
+		</script>
+
+
+	</head>
+	<body>
+		<div>
+			<div><h1>Home thing</h1></div>
+			<div>
+				<div>
+					<h2>add home</h2>
+					<form id="new-home" action="#">
+						<div>
+							address
+							<input id="address" type="text"/>
+						</div>
+						<div>
+							price
+							<input id="price" type="number"/>
+						</div>
+						<div>
+							<input type="submit" value="add"/>
+						</div>
+					</form>
+				</div>
+				<div id="home-list">
+					<h2>view all</h2>
+					<table id="home-table">
+						<tr><th>Address</th><th>Price</th></tr>
+						<!-- <tr><td>Address</td><td>Price</td></tr> -->
+						
+					</table>
+				</div>
+
+			</div>
+
+		
+		
+		</div>
+
+	</body>
+</html>

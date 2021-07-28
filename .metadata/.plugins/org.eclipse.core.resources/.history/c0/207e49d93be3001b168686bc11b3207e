@@ -1,0 +1,9 @@
+package hi;
+
+public class Mane {
+
+	 static void public main(String[] args) {
+		System.out.println("howdy");
+	}
+
+}

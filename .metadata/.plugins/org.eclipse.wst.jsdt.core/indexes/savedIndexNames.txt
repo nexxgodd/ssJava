@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+D:\sstorm\java\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+670231021.index
+1580762233.index
+382831797.index
+2675544992.index
+3881714298.index
+3803789452.index
+292393071.index
+2056347550.index
+2277938550.index

@@ -1,0 +1,41 @@
+package com.test;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.List;
+
+import org.junit.Test;
+
+import com.skillstorm.bean.Car;
+import com.skillstorm.data.CarrrService;
+
+public class DAOTest {
+	CarrrService service = new CarrrService();
+	
+	@Test
+	public void selectAll() {
+		List<Car> all =service.findAll();
+		all.forEach(System.out::println);
+		assertTrue(all.size()>0);
+	}
+	
+	@Test
+	public void select() {
+		assertTrue(false);
+	}
+	
+	@Test
+	public void insert() {
+		assertTrue(false);
+	}
+	
+	@Test
+	public void update() {
+		assertTrue(false);
+	}
+	
+	@Test
+	public void delete() {
+		assertTrue(false);
+	}
+}

@@ -1,0 +1,9 @@
+package com.skillstorm.data;
+
+public class FlightDAO {
+
+	public static void main(String[] args)   {
+		System.out.println("hi");
+	}
+
+}

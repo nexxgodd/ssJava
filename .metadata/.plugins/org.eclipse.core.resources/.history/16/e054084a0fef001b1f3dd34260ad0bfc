@@ -1,0 +1,20 @@
+package com.test;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.List;
+
+import org.junit.Test;
+
+import com.skillstorm.bean.Car;
+import com.skillstorm.data.CarrrService;
+
+public class DAOTest {
+	CarrrService service = new CarrrService();
+	
+	@Test
+	public void selectAll() {
+		List<Car> all =service.findAll();
+		assertTrue(all.size()<0);
+	}
+}

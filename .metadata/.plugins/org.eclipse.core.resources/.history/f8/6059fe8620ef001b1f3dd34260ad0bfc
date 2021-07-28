@@ -1,0 +1,14 @@
+package com.skillstorm.data;
+
+import java.util.List;
+
+import com.skillstorm.bean.Car;
+
+public class CarrrService {
+	CarrrDAO dao=new CarrrDAO();
+	
+	public List<Car> findAll(){
+		return dao.selectAll();
+	}
+
+}

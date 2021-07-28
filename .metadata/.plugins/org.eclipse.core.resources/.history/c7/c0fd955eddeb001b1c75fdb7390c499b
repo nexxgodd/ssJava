@@ -1,0 +1,30 @@
+package hi;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Mane {
+
+	 public static void main(String[] args)   {
+		 
+		 Map<String, String> games = new HashMap<>();
+		 
+		 games.put(null, "hello");
+		 games.put("null", "bye");
+		 //games.
+		 
+		 System.out.println(games);
+		 
+		 Thing t= new Thing();
+		 
+		 System.out.println(t.hashCode());
+		 
+	 }
+	 
+	 
+
+}
+
+class Thing{
+	
+}
