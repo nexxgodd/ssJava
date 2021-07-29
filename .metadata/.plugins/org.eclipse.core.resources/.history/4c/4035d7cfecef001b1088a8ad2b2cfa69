@@ -1,0 +1,97 @@
+package com.test;
+
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
+import java.util.List;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import com.skillstorm.bean.Car;
+import com.skillstorm.data.CarrrService;
+
+public class DAOTest {
+	static CarrrService service = new CarrrService();
+	static final String VIN="JHMGE8G24AC915549";
+	static final Car NEWCAR = new Car("newvin", 2020, "1", "1", "Sedan", 42, "red", "1");
+	
+	
+	
+	@BeforeClass
+	public static void prepDB() {
+		service.add(new Car("updateA",0, "", "", "", 0, "", ""));
+		service.add(new Car("updateB",0, "", "", "", 0, "", ""));
+		service.add(new Car("delete",0, "", "", "", 0, "", ""));
+		
+	}
+	
+	/*********************************** Select ***********************************/
+	
+	@Test
+	public void selectAll() {
+		List<Car> all =service.findAll();
+		//all.forEach(System.out::println);
+		assertTrue(all.size()>0);
+	}
+	
+	@Test
+	public void select() {
+		Car car =service.find(VIN);
+		assertTrue(car!=null && car.getMake().equals("Infiniti"));
+	}
+	
+	@Test
+	public void selectBad() {
+		Car car =service.find("badvin");
+		assertTrue(car==null);
+	}
+	
+	/*********************************** Insert ***********************************/
+
+	@Test
+	public void insert() {
+		assertTrue(false);//						needs imp
+	}
+	
+	@Test
+	public void insertSome() {
+		assertTrue(false);//						needs imp
+	}
+	
+	@Test
+	public void insertBad() {
+		assertTrue(false);//						needs imp
+	}
+	
+	/*********************************** Update ***********************************/
+
+	
+	@Test
+	public void updateT() {
+		if(!service.updateAvailability("updateA", true)) {
+			fail();
+		}
+		Car car =service.find(VIN);
+		assertTrue(car!=null && car.getAvailable());
+	}
+	
+	@Test
+	public void updateF() {
+		if(!service.updateAvailability(VIN, false)) {
+			fail();
+		}
+		Car car =service.find(VIN);
+		assertTrue(car!=null && !car.getAvailable());
+	}
+	
+	/*********************************** Delete ***********************************/
+	
+	
+	@AfterClass
+	public static void fixDB() {
+		
+	}
+	
+}

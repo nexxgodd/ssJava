@@ -22,6 +22,9 @@ public class CarrrService {
 	public boolean updateAvailability(String vin, boolean available) {
 		return dao.updateAvailability(vin, available);
 	}
+	public boolean update(String vin, Car car) {
+		return dao.update(vin, car);
+	}
 	
 	public boolean remove(String vin) {
 		return dao.delete(vin);

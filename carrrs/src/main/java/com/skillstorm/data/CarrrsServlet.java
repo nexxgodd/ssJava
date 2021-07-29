@@ -25,13 +25,23 @@ public class CarrrsServlet extends HttpServlet {
     public CarrrsServlet() {}
     
     
+    //return all or specified
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		List<Car> all =service.findAll();
-		all.forEach(System.out::println);
-		String json = new ObjectMapper().writeValueAsString(all);
+		String param = request.getParameter("vin"); 
 		
-		response.getWriter().print(json);
+		if(param==null) {
+			List<Car> all =service.findAll();
+			//all.forEach(System.out::println);
+			String json = new ObjectMapper().writeValueAsString(all);
+			response.getWriter().print(json);
+		}
+		else {
+			//System.out.println(param);
+			Car car =service.find(param.toUpperCase());
+			String json = car==null?"{}":new ObjectMapper().writeValueAsString(car);
+			System.out.println(json);
+			response.getWriter().print(json);
+		}
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 

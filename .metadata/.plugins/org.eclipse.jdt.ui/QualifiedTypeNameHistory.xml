@@ -23,4 +23,8 @@
 <fullyQualifiedTypeName name="com.skillstorm.data.CarrrService"/>
 <fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="org.junit.BeforeClass"/>
+<fullyQualifiedTypeName name="org.junit.AfterClass"/>
+<fullyQualifiedTypeName name="com.skillstorm.bean.Car"/>
 </qualifiedTypeNameHistroy>

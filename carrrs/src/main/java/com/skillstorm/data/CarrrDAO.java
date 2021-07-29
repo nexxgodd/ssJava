@@ -45,7 +45,6 @@ public class CarrrDAO {
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setString(1,vin);
 			ResultSet rs = stmt.executeQuery();
-			//System.out.println(vin+":"+rs.gets);
 			if(rs.next()) {			//vin, 		year, 			make, 			model, 		body_style, 	
 				return new Car(rs.getString(1),rs.getInt(2),rs.getString(3),rs.getString(4),rs.getString(5),
 						//	price, 		  color, 		   available, 				url
@@ -53,10 +52,7 @@ public class CarrrDAO {
 			}
 		}catch (SQLException e) {
 			e.printStackTrace();
-		}catch (NullPointerException e) {
-			System.out.println("not found");
-			e.printStackTrace();
-		}				
+		}
 		return null;
 	}
 	
@@ -68,14 +64,13 @@ public class CarrrDAO {
 			stmt.setString(1,car.getVin());
 			stmt.setInt(2,car.getYear());
 			stmt.setString(3,car.getMake());
-			stmt.setString(4,car.getMake());
+			stmt.setString(4,car.getModel());
 			stmt.setString(5,car.getBody_style());
 			stmt.setFloat(6,car.getPrice());
 			stmt.setString(7,car.getColor());
-			stmt.setString(9,car.getUrl());
+			stmt.setString(8,car.getUrl());
 
-			System.out.println("insert count=" +stmt.executeUpdate());
-			return true;
+			return stmt.executeUpdate()==1;
 		}catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -89,9 +84,8 @@ public class CarrrDAO {
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setBoolean(1,available);
 			stmt.setString(2,vin);
-						
-			System.out.println("update count=" +stmt.executeUpdate());
-			return true;
+
+			return stmt.executeUpdate()==1;
 		}catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -99,10 +93,39 @@ public class CarrrDAO {
 	}
 	
 	public boolean update(String vin, Car car) {
+		try(Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD)){
+			String sql="update cars set vin=?,year=?,make=?,model=?,body_style=?,price=?,color=?,available=?,url=? where vin=?;";
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setString(1,car.getVin());
+			stmt.setInt(2,car.getYear());
+			stmt.setString(3,car.getMake());
+			stmt.setString(4,car.getMake());
+			stmt.setString(5,car.getBody_style());
+			stmt.setFloat(6,car.getPrice());
+			stmt.setString(7,car.getColor());
+			stmt.setBoolean(8,car.getAvailable());
+			stmt.setString(9,car.getUrl());
+			
+			stmt.setString(10,vin);
+
+			return stmt.executeUpdate()==1;
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return false;
 	}
 	
 	public boolean delete(String vin) {
+
+		try(Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD)){
+			String sql="delete from cars where vin=?;";
+			PreparedStatement stmt = conn.prepareStatement(sql);			
+			stmt.setString(1,vin);
+
+			return stmt.executeUpdate()==1;
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return false;
 	}
 	
