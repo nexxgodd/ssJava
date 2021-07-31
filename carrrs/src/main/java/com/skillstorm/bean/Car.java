@@ -12,6 +12,8 @@ public class Car {
 	private boolean available;
 	private String url;
 	
+	public Car() {}
+	
 	//												  null										   null			null
 	public Car(String vin, int year, String make, String model, String body_style, float price, String color, String url) {
 		this.vin = vin;
@@ -41,6 +43,16 @@ public class Car {
 	
 	
 	
+	public void setVin(String vin) { this.vin = vin; }
+	public void setYear(int year) { this.year = year; }
+	public void setMake(String make) { this.make = make; }
+	public void setModel(String model) { this.model = model; }
+	public void setBody_style(String body_style) { this.body_style = body_style; }
+	public void setPrice(float price) { this.price = price; }
+	public void setColor(String color) { this.color = color; }
+	public void setAvailable(boolean available) { this.available = available; }
+	public void setUrl(String url) { this.url = url; }
+
 	@Override
 	public String toString() {
 		return year + " " + make + " " + model + " for: $" + price;

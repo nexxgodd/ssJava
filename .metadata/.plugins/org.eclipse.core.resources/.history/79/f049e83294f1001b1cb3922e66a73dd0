@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Carrs</display-name>
+
+
+</web-app>
+
+  
+  
+  
+<!--   	<context-param>
+		<param-name>incomingURLs</param-name>
+		<param-value>http://localhost:5500,http://localhost:8080</param-value>
+	</context-param>
+	
+	<filter>
+  <filter-name>CorsFilter</filter-name>
+  <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+</filter>
+<filter-mapping>
+  <filter-name>CorsFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+</filter-mapping>
+ <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Carrrs</display-name>
+    <servlet-name>Carrrs</servlet-name>
+    <servlet-class>com.skillstorm.data.CarrrsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CarrrsServlet</servlet-name>
+    <url-pattern>/carrrs</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CarrrsServlet</display-name>
+    <servlet-name>CarrrsServlet</servlet-name>
+    <servlet-class>com.skillstorm.data.CarrrsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CarrrsServlet</servlet-name>
+    <url-pattern>/CarrrsServlet</url-pattern>
+  </servlet-mapping>
+  -->

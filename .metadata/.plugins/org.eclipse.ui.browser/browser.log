@@ -2,3 +2,42 @@
 Jul 29, 2021 08:08:57.33 NEW SESSION
 Jul 29, 2021 08:08:57.33 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
 Jul 29, 2021 08:08:57.33 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 29, 2021 16:45:55.07 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 29, 2021 16:45:55.08 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 29, 2021 16:45:56.41 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 29, 2021 16:45:56.41 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 29, 2021 16:46:01.31 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 29, 2021 16:46:01.31 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 29, 2021 16:46:48.32 [Parent 21628, IPC I/O Parent] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:544
+Jul 29, 2021 16:46:48.33 
+Jul 29, 2021 16:46:48.33 ###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+Jul 29, 2021 16:46:48.33 
+Jul 29, 2021 16:46:59.04 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 29, 2021 16:46:59.05 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 29, 2021 16:47:56.26 [Child 19444, MediaDecoderStateMachine #1] WARNING: 1d9d4eac3c0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+Jul 29, 2021 16:50:00.59 
+Jul 29, 2021 16:50:00.59 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+Jul 29, 2021 16:50:00.59 
+Jul 29, 2021 16:50:00.59 
+Jul 29, 2021 16:50:00.59 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+Jul 29, 2021 16:50:00.59 
+Jul 29, 2021 16:50:00.59 
+Jul 29, 2021 16:50:00.59 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+Jul 29, 2021 16:50:00.59 
+Jul 29, 2021 16:52:50.52 [Child 29328, MediaDecoderStateMachine #1] WARNING: 2a2f472c900 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+Jul 29, 2021 16:58:45.90 [Child 29328, MediaDecoderStateMachine #1] WARNING: 2a2f4fb53c0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+Jul 29, 2021 17:04:43.14 [Child 29328, MediaDecoderStateMachine #1] WARNING: 2a2f4a48d60 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+Jul 29, 2021 17:10:37.87 [Child 29328, MediaDecoderStateMachine #1] WARNING: 2a2f3474ac0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+Jul 29, 2021 19:03:41.69 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 29, 2021 19:03:41.69 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 29, 2021 19:03:44.69 [Child 8420, MediaDecoderStateMachine #1] WARNING: 1ed2c204660 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+Jul 30, 2021 10:15:05.84 [GFX1-]: DCompositionSurface::BeginDraw failed: 0x8007000e
+Jul 30, 2021 10:15:05.94 [GFX1-]: Fallback WR to SW-WR + D3D11
+Jul 30, 2021 11:47:14.57 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 30, 2021 11:47:14.57 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 30, 2021 11:47:33.71 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 30, 2021 11:47:33.71 [GFX1-]: WMF VPX video decoding is disabled due to a previous crash.
+Jul 30, 2021 11:48:07.66 [Child 7104, MediaDecoderStateMachine #1] WARNING: 1a3da8073c0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+Jul 30, 2021 11:58:52.78 [Child 7104, MediaDecoderStateMachine #2] WARNING: 1a3da8074a0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+Jul 30, 2021 12:00:35.22 [Child 7104, MediaDecoderStateMachine #2] WARNING: 1a3d63b49e0 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+Jul 30, 2021 12:01:07.79 [Child 7104, MediaDecoderStateMachine #2] WARNING: 1a3dc309040 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
