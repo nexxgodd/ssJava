@@ -25,10 +25,8 @@ public class CarrrsServlet extends HttpServlet {
     
     //return all or specified
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//response.addHeader("Access-Control-Allow-Origin", "*");
 		String vin = request.getParameter("vin"); 
 		
-		//get all if no param
 		if(vin==null) {
 			List<Car> all =service.findAll();
 			//all.forEach(System.out::println);
@@ -70,7 +68,6 @@ public class CarrrsServlet extends HttpServlet {
 		else {
 //			boolean success =service.remove(param.toUpperCase());
 //			response.getWriter().print(success);
-			
 			
 			Car newCar= new ObjectMapper().readValue(request.getInputStream(), Car.class);
 			boolean success =service.update(vin,newCar);

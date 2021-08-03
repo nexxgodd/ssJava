@@ -25,7 +25,6 @@ public class CarrrsServlet extends HttpServlet {
     
     //return all or specified
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//response.addHeader("Access-Control-Allow-Origin", "*");
 		String vin = request.getParameter("vin"); 
 		
 		//get all if no param
