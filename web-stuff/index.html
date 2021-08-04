@@ -37,7 +37,7 @@
 				</ul>
 				<form class="d-flex" >
 					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-dark" type="submit">Search</button>
+					<button id="temp" class="btn btn-outline-dark" type="submit">Search</button>
 				  </form>
 				</div>
 
@@ -61,11 +61,13 @@
 								
 								<div class="car">
 									<div class=a>
-										<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#b8b8b8" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
-											<path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
-										</svg>
+										<button class="edit-btn" onclick="addNewModal()">
+											<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#b8b8b8" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+												<path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+											</svg>
 
-										<div>Add a new car to the list</div>										<button>hi</button> 
+											<div>Add a new car to the list</div>		
+										</button> 
 									
 									</div>
 								</div>
@@ -94,12 +96,72 @@
 		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<form id="newCarForm">
-			<div class="modal-body">
-			...
+			<div class="modal-body row justify-content-center">
+				<div class="col-md-9">
+					<label for="inputVIN" class="form-label">VIN</label>
+					<input type="text" class="form-control" id="inputVIN">
+				</div>
+				<div class="col-md-3">
+					<label for="inputYear" class="form-label">Year</label>
+					<input type="text" class="form-control" id="inputYear">
+				</div>
+
+				<div class="col-md-6">
+					<label for="inputMake" class="form-label">Make</label>
+					<input type="text" class="form-control" id="inputMake">
+				</div>
+				<div class="col-md-6">
+					<label for="inputModel" class="form-label">Model</label>
+					<input type="text" class="form-control" id="inputModel">
+				</div>
+
+
+				<div class="col-md-6">
+					<label for="inputBody" class="form-label">Body Style</label>
+					<select id="inputBody" class="form-select">
+						<option selected>Choose...</option>
+						<option>Coupe</option>
+						<option>Hatchback</option>
+						<option>Pickup</option>
+						<option>Sedan</option>
+						<option>SUV</option>
+						<option>Van</option>
+					</select>
+				</div>
+
+				<div class="col-md-6">
+					<label for="inputColor" class="form-label">Color</label>
+					<select id="inputColor" class="form-select">
+						<option selected>Choose...</option>
+						<option>Black</option>
+						<option>Blue</option>
+						<option>Gold</option>
+						<option>Gray</option>
+						<option>Green</option>
+						<option>Orange</option>
+						<option>Pink</option>
+						<option>Purple</option>
+						<option>Red</option>
+						<option>Silver</option>
+						<option>Tan</option>
+						<option>White</option>
+					</select>
+				</div>
+
+
+				<div class="col-md-12">
+					<label for="inputUrl" class="form-label">Image URL</label>
+					<input type="text" class="form-control" id="inputUrl">
+				</div>
+				<div class="col-md-4">
+					<label for="inputPrice" class="form-label">Daily Price</label>
+					<input type="text" class="form-control" id="inputPrice">
+				</div>
+
 			</div>
 			<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-			<button type="button" class="btn btn-primary">Add</button>
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-primary" onclick="doModal()">Edit</button>
 			</div>
 		</form>
 	  </div>

@@ -37,3 +37,6 @@ body{
     border: none !important;
 }
 
+.modal-body > div{
+	margin-bottom: 10px;
+}

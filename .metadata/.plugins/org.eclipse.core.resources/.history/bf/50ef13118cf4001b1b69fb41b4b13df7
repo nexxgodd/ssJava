@@ -2,18 +2,17 @@ package hi;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 public class Mane {
 
 	 public static void main(String[] args)   {
 		 
 		 //   name     pw
-		 //Map<String, String> users = new HashMap<>();
+		 Map<String, String> users = new HashMap<>();
 		 
 		 //users
 		 
-//		 Optional<String> o = ;
+		 
 		 
 		 
 		 

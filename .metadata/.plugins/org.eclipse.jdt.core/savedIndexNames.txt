@@ -15,7 +15,6 @@ INDEX VERSION 1.131+D:\sstorm\java\.metadata\.plugins\org.eclipse.jdt.core
 2369742135.index
 3149747983.index
 417988254.index
-292393071.index
 3298297436.index
 3062496422.index
 1446378831.index

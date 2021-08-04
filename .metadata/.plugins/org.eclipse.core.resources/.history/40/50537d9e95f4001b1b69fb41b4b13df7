@@ -3,7 +3,6 @@ package com.skillstorm.data;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-import java.util.Optional;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,8 +34,6 @@ public class CarrrsServlet extends HttpServlet {
 			//all.forEach(System.out::println);
 			String json = new ObjectMapper().writeValueAsString(all);
 			response.getWriter().print(json);
-			response.setStatus(201); // "return"
-			response.setContentType("application/json");
 		}
 		else {
 			if(vin.length()>17) {
@@ -47,8 +44,6 @@ public class CarrrsServlet extends HttpServlet {
 				String json = car==null?"{}":new ObjectMapper().writeValueAsString(car);
 				System.out.println(json);
 				response.getWriter().print(json);
-				response.setStatus(201); // "return"
-				response.setContentType("application/json");
 			}
 		}
 	}
@@ -69,7 +64,6 @@ public class CarrrsServlet extends HttpServlet {
 		System.out.println("put");
 
 		String vin = request.getParameter("vin"); 
-		Integer.parseInt(s)
 		if(vin==null||vin.length()>17) {	
 			response.getWriter().print(false);
 		}

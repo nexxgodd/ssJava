@@ -63,14 +63,26 @@ function urlBuilder(url){
 
 
 function openEditor(vin) {
+	currentVin=vin;
+	let car =document.getElementById(vin);
+
+	document.getElementById("newCarLabel").innerText="Edit this vehicle";
+	document.getElementById("inputVIN").value=vin;
+	document.getElementById("inputYear").value=car.getAttribute("year");
+	document.getElementById("inputMake").value=car.getAttribute("make");
+	document.getElementById("inputModel").value=car.getAttribute("model");
+	document.getElementById("inputBody").value=car.getAttribute("body");
+	document.getElementById("inputColor").value=car.getAttribute("color");
+	document.getElementById("inputUrl").value=car.getAttribute("image");
+	document.getElementById("inputPrice").value=car.getAttribute("price");
 	
-	document.getElementById("newCarLabel").innerText=vin;
+	//year="${c.year}" make="${c.make}" model="${c.model}" body="${c.body_style}" color="${c.color}" image="${c.url}"
+
+
 	let newCarModal = new bootstrap.Modal(document.getElementById('newCar'), {
 		keyboard: true
-	  });
-	  console.log(newCarModal)
-
-	  newCarModal.show();
+	});
+	newCarModal.show();
 	  
 	//document.getElementById("newCar").show();
 	
@@ -78,7 +90,7 @@ function openEditor(vin) {
 
 function carBuilder(c){
 	return `
-<div id="${c.vin}" class="car">
+<div id="${c.vin}" class="car" year="${c.year}" make="${c.make}" model="${c.model}" body="${c.body_style}" color="${c.color}" image="${c.url}" price="${c.price}">
 	<div class="col card" tag="${c.body_style} ${c.color}">
 		<div class="card-body">
 			<div class="text-end">
@@ -97,4 +109,13 @@ function carBuilder(c){
 		</div>
 	</div>
 </div>`
+}
+
+var currentVin=null;
+
+
+
+function addNewModal(){
+	document.getElementById("temp").focus();
+
 }
