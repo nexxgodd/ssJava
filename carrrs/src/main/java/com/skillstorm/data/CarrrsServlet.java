@@ -35,7 +35,7 @@ public class CarrrsServlet extends HttpServlet {
 			//all.forEach(System.out::println);
 			String json = new ObjectMapper().writeValueAsString(all);
 			response.getWriter().print(json);
-			response.setStatus(201); // "return"
+			response.setStatus(200); // "return"
 			response.setContentType("application/json");
 		}
 		else {
@@ -47,7 +47,7 @@ public class CarrrsServlet extends HttpServlet {
 				String json = car==null?"{}":new ObjectMapper().writeValueAsString(car);
 				System.out.println(json);
 				response.getWriter().print(json);
-				response.setStatus(201); // "return"
+				response.setStatus(200); // "return"
 				response.setContentType("application/json");
 			}
 		}
@@ -61,7 +61,8 @@ public class CarrrsServlet extends HttpServlet {
 		boolean success =service.add(newCar);
 		
 		response.getWriter().print(success);
-		//response.setStatus(200);
+		response.setStatus(success?201:500);
+		response.setContentType("application/json");
 	}
 	
 	//update
@@ -69,20 +70,19 @@ public class CarrrsServlet extends HttpServlet {
 		System.out.println("put");
 
 		String vin = request.getParameter("vin"); 
-		Integer.parseInt(s)
+		
 		if(vin==null||vin.length()>17) {	
 			response.getWriter().print(false);
+			response.setStatus(500);
 		}
 		else {
-//			boolean success =service.remove(param.toUpperCase());
-//			response.getWriter().print(success);
-			
-			
 			Car newCar= new ObjectMapper().readValue(request.getInputStream(), Car.class);
 			boolean success =service.update(vin,newCar);
 			
 			response.getWriter().print(success);
+			response.setStatus(success?200:500);
 		}
+		response.setContentType("application/json");
 	}
 	
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -90,13 +90,16 @@ public class CarrrsServlet extends HttpServlet {
 		System.out.println("delete");
 		
 		String vin = request.getParameter("vin"); 
-		if(vin==null||vin.length()>17) {	
+		if(vin==null||vin.length()!=17) {	
 			response.getWriter().print(false);
+			response.setStatus(500);
 		}
 		else {
 			boolean success =service.remove(vin.toUpperCase());
 			response.getWriter().print(success);
+			response.setStatus(success?200:500);
 		}
+		response.setContentType("application/json");
 		
 	}
 

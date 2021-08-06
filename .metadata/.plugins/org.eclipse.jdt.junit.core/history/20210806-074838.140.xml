@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DAOTest" project="carrrs" tests="11" started="11" failures="0" errors="0" ignored="0">
+  <testsuite name="com.test.DAOTest" time="0.48">
+    <testcase name="selectAll" classname="com.test.DAOTest" time="0.035"/>
+    <testcase name="selectBad" classname="com.test.DAOTest" time="0.022"/>
+    <testcase name="delete" classname="com.test.DAOTest" time="0.05"/>
+    <testcase name="insert" classname="com.test.DAOTest" time="0.041"/>
+    <testcase name="insertWithNulls" classname="com.test.DAOTest" time="0.049"/>
+    <testcase name="select" classname="com.test.DAOTest" time="0.022"/>
+    <testcase name="insertBad" classname="com.test.DAOTest" time="0.047"/>
+    <testcase name="insertDup" classname="com.test.DAOTest" time="0.024"/>
+    <testcase name="deleteBad" classname="com.test.DAOTest" time="0.021"/>
+    <testcase name="updateF" classname="com.test.DAOTest" time="0.042"/>
+    <testcase name="updateT" classname="com.test.DAOTest" time="0.127"/>
+  </testsuite>
+</testrun>

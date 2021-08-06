@@ -1,5 +1,6 @@
 body{
 	background-color: blueviolet;
+	background-image: url(resources/wooden-background.jpg);
 }
 #carrrs{
 	font-family: 'Permanent Marker', cursive;
@@ -8,7 +9,7 @@ body{
 }
 
 .navbar{
-	background-color: #2691dd;
+	background-color: #414142;
 	
 }
 
@@ -18,25 +19,85 @@ body{
 }
 
 #spacer{
-	height: 10px;
+	height: 0px;
 	border-radius:0;
 	margin-bottom: 50px;
+	background-color: #2c2c2c;
 }
 
-.car{
+h1{
+	color: honeydew;
+	padding-bottom: 50px;
+}
+
+.light-text{
+	color: honeydew;
+}
+
+/* .car{
 	margin-bottom: 10px;
+} */
+
+
+
+.big-card {
+	background-color: #424141;
+
+}
+.small-card {
+	background-color: #2c2c2c;
+	color: honeydew;
+	height: 100%;
 }
 
-.display-img{
-	width: 100%;
-	/* height:0px; */
-}
 
 .edit-btn{
+	padding-top: -50px;
 	background: transparent;
     border: none !important;
 }
 
 .modal-body > div{
 	margin-bottom: 10px;
+}
+
+
+
+
+.car{
+	/* height:100% */
+	
+	padding-bottom: 30px;
+}
+#notacar{
+	align-content: center;
+}
+
+
+/* #showroom{
+	display:  flex; 
+	align-items:stretch;
+	flex-direction: row;
+} */
+
+.test{
+	background-color: rgb(73, 30, 52);
+	/* height: 100%; */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.card{
+	border-width: 5px;
+	border-color: black;
 }

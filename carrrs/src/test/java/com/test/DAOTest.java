@@ -35,6 +35,10 @@ public class DAOTest {
 	public void selectAll() {
 		List<Car> all =service.findAll();
 //		all.forEach(System.out::println);
+//		for(Car car:all) {
+//			if
+//		}
+		
 		assertTrue(all.size()>0);
 	}
 	
@@ -73,6 +77,11 @@ public class DAOTest {
 	@Test
 	public void insertBad() {
 		assertFalse(service.add(new Car("not2b",0, "", null, null, 0, null, null)));
+	}
+	
+	@Test
+	public void insertDup() {
+		assertFalse(service.add(new Car(VIN,0, "", "", "", 0, "", "")));
 	}
 	
 	/*********************************** Update ***********************************/

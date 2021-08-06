@@ -34,7 +34,8 @@ public class CarrrDAO {
 						rs.getFloat(6),rs.getString(7), rs.getBoolean(8),	rs.getString(9)));
 			}
 		}catch (SQLException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			System.out.println(e);
 		}		
 		return cars;
 	}
@@ -51,7 +52,8 @@ public class CarrrDAO {
 						rs.getFloat(6),rs.getString(7), rs.getBoolean(8),	rs.getString(9));
 			}
 		}catch (SQLException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			System.out.println(e);
 		}
 		return null;
 	}
@@ -72,7 +74,8 @@ public class CarrrDAO {
 
 			return stmt.executeUpdate()==1;
 		}catch (SQLException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+			System.out.println(e);
 		}
 		return false;
 	}
@@ -87,7 +90,8 @@ public class CarrrDAO {
 
 			return stmt.executeUpdate()==1;
 		}catch (SQLException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			System.out.println(e);
 		}
 		return false;
 	}
@@ -99,7 +103,7 @@ public class CarrrDAO {
 			stmt.setString(1,car.getVin());
 			stmt.setInt(2,car.getYear());
 			stmt.setString(3,car.getMake());
-			stmt.setString(4,car.getMake());
+			stmt.setString(4,car.getModel());
 			stmt.setString(5,car.getBody_style());
 			stmt.setFloat(6,car.getPrice());
 			stmt.setString(7,car.getColor());
@@ -110,7 +114,8 @@ public class CarrrDAO {
 
 			return stmt.executeUpdate()==1;
 		}catch (SQLException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			System.out.println(e);
 		}
 		return false;
 	}
@@ -124,7 +129,8 @@ public class CarrrDAO {
 
 			return stmt.executeUpdate()==1;
 		}catch (SQLException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			System.out.println(e);
 		}
 		return false;
 	}
